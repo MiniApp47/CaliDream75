@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       products: [
         {
-          id: "Full Spectrum  💎",
+          id: "Wpff 90-73 🔱",
           flag: "🇺🇸",
           name: "Wpff 90-73 🔱",
           farm: "ByUsForYou 🛍️",
