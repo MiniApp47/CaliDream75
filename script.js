@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     image: "Categ3X.png",
 
       products: [
-        {
+       /*  {
           id: "🧠🍀AMNESIA CORE CUT 🍀🧠",
           flag: "🇳🇱",
           name: "🧠🍀 AMNESIA CORE CUT 🍀🧠",
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
           description:
             "💎🔥 Considérée par de nombreux connaisseurs comme l’une des meilleures expressions de l’Amnesia, la Amnesia Core Cut est une sélection d’élite recherchée pour son profil terpénique puissant et son effet cérébral particulièrement intense. 🔥💎\n\n ✨ Les effets\n\n 🚀 Montée rapide et énergique\n 😄 Euphorie marquée\n 🧠 Stimulation mentale puissante\n 🎨 Créativité et concentration accrues\n 🗣️ Effet social apprécié des amateurs de sativas\n\n 👃 Les arômes\n\n 🍊 Agrumes frais et zestés\n 🌿 Notes Haze classiques\n 🌶️ Légères touches épicées et encensées\n\n 🌱 Pourquoi elle est si recherchée ? \n\n • Sélection réputée pour sa stabilité \n • Profil aromatique particulièrement intense \n • Forte production de résine ✨ \n • Expression fidèle de l’esprit Amnesia « old school » \n • Très appréciée des amateurs de Haze européennes\n\n 🏆 Pour les connaisseurs\n La Core Cut est souvent citée parmi les meilleures coupes d’Amnesia grâce à son équilibre entre puissance, saveurs citronnées explosives et effet mental clair. Beaucoup la considèrent comme une référence lorsqu’on parle de vraie Amnesia de haut niveau.\n\n ⭐ En résumé :\n Une Amnesia premium, ultra citronnée, résineuse et cérébrale, recherchée par les amateurs de Haze authentiques et les passionnés de génétiques européennes. 🔥⚡🧠💎🌿",
           tarifs: [{ weight: "10g", price: 70.0 }],
-        },
+        }, */
       ],
     },
     {
@@ -564,7 +564,7 @@ document.addEventListener("DOMContentLoaded", function () {
     image: "CategHash.png",
 
       products: [
-        {
+       /*  {
           id: "SPRITZER 🍸",
           flag: "🇲🇦",
           name: "SPRITZER 🍸",
@@ -582,7 +582,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { weight: "50G", price: 250.0 },
             { weight: "100G", price: 400.0 },
           ],
-        },
+        }, */
       ],
     },
      ];
