@@ -88,132 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
           ],
         },
          {
-          id: "SUNSET Z🇺🇸",
-          flag: "🇺🇸",
-          name: "SUNSET Z🇺🇸",
-          farm: "HashForceOne ✈️🇺🇸",
-          promoEligible: true,
-          type: "🍁 Static 70/130",
-          image: "ProductSZ.jpg",
-          video: "VideoSZ.mov",
-          description:   "🍁 Static Premium 70/130",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
-          id: "VELVET SKY🇺🇸",
-          flag: "🇺🇸",
-          name: "VELVET SKY🇺🇸",
-          farm: "HashForceOne ✈️🇺🇸",
-          promoEligible: true,
-          type: "🍁 Static 70/130",
-          image: "ProductVS.jpg",
-          video: "VideoVS.mov",
-          description:   "🍁 Static Premium 70/130",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
-          id: "ZESTO🇺🇸",
-          flag: "🇺🇸",
-          name: "ZESTO🇺🇸",
-          farm: "HashForceOne ✈️🇺🇸",
-          promoEligible: true,
-          type: "🍁 Static 70/130",
-          image: "ProductZ.jpg",
-          video: "VideoZ.mov",
-          description:   "🍁 Static Premium 70/130",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
-          id: "BERRY DRIP🇺🇸",
-          flag: "🇺🇸",
-          name: "BERRY DRIP🇺🇸",
-          farm: "HashForceOne ✈️🇺🇸",
-          promoEligible: true,
-          type: "🍁 Static 70/130",
-          image: "ProductBD.jpg",
-          video: "VideoBD.mov",
-          description:   "🍁 Static Premium 70/130",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
-          id: "CEREAL MILK🇺🇸",
-          flag: "🇺🇸",
-          name: "CEREAL MILK🇺🇸",
-          farm: "HashForceOne ✈️🇺🇸",
-          promoEligible: true,
-          type: "🍁 Static 70/130",
-          image: "ProductCM.jpg",
-          video: "VideoCM.mov",
-          description:   "🍁 Static Premium 70/130",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
-          id: "JEALOUSY🇺🇸",
-          flag: "🇺🇸",
-          name: "JEALOUSY🇺🇸",
-          farm: "HashForceOne ✈️🇺🇸",
-          promoEligible: true,
-          type: "🍁 Static 70/130",
-          image: "ProductJ.jpg",
-          video: "VideoJ.mov",
-          description:   "🍁 Static Premium 70/130",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
-          id: "GUSHERS PIE🇺🇸",
-          flag: "🇺🇸",
-          name: "GUSHERS PIE🇺🇸",
-          farm: "HashForceOne ✈️🇺🇸",
-          promoEligible: true,
-          type: "🍁 Static 70/130",
-          image: "ProductGP.jpg",
-          video: "VideoGP.mov",
-          description:   "🍁 Static Premium 70/130",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
           id: "FFx26mm 🍒🍊🏔️",
           flag: "🇲🇦",
           name: "FFx26mm 🍒🍊🏔️",
@@ -477,6 +351,132 @@ document.addEventListener("DOMContentLoaded", function () {
             { weight: "2g", price: 70.0 },
             { weight: "5g", price: 140.0 },
             { weight: "10g", price: 250.0 },
+          ],
+        },
+         {
+          id: "SUNSET Z🇺🇸",
+          flag: "🇺🇸",
+          name: "SUNSET Z🇺🇸",
+          farm: "HashForceOne ✈️🇺🇸",
+          promoEligible: true,
+          type: "🍁 Static 70/130",
+          image: "ProductSZ.jpg",
+          video: "VideoSZ.mov",
+          description:   "🍁 Static Premium 70/130",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
+          ],
+        },
+         {
+          id: "VELVET SKY🇺🇸",
+          flag: "🇺🇸",
+          name: "VELVET SKY🇺🇸",
+          farm: "HashForceOne ✈️🇺🇸",
+          promoEligible: true,
+          type: "🍁 Static 70/130",
+          image: "ProductVS.jpg",
+          video: "VideoVS.mov",
+          description:   "🍁 Static Premium 70/130",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
+          ],
+        },
+         {
+          id: "ZESTO🇺🇸",
+          flag: "🇺🇸",
+          name: "ZESTO🇺🇸",
+          farm: "HashForceOne ✈️🇺🇸",
+          promoEligible: true,
+          type: "🍁 Static 70/130",
+          image: "ProductZ.jpg",
+          video: "VideoZ.mov",
+          description:   "🍁 Static Premium 70/130",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
+          ],
+        },
+         {
+          id: "BERRY DRIP🇺🇸",
+          flag: "🇺🇸",
+          name: "BERRY DRIP🇺🇸",
+          farm: "HashForceOne ✈️🇺🇸",
+          promoEligible: true,
+          type: "🍁 Static 70/130",
+          image: "ProductBD.jpg",
+          video: "VideoBD.mov",
+          description:   "🍁 Static Premium 70/130",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
+          ],
+        },
+         {
+          id: "CEREAL MILK🇺🇸",
+          flag: "🇺🇸",
+          name: "CEREAL MILK🇺🇸",
+          farm: "HashForceOne ✈️🇺🇸",
+          promoEligible: true,
+          type: "🍁 Static 70/130",
+          image: "ProductCM.jpg",
+          video: "VideoCM.mov",
+          description:   "🍁 Static Premium 70/130",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
+          ],
+        },
+         {
+          id: "JEALOUSY🇺🇸",
+          flag: "🇺🇸",
+          name: "JEALOUSY🇺🇸",
+          farm: "HashForceOne ✈️🇺🇸",
+          promoEligible: true,
+          type: "🍁 Static 70/130",
+          image: "ProductJ.jpg",
+          video: "VideoJ.mov",
+          description:   "🍁 Static Premium 70/130",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
+          ],
+        },
+         {
+          id: "GUSHERS PIE🇺🇸",
+          flag: "🇺🇸",
+          name: "GUSHERS PIE🇺🇸",
+          farm: "HashForceOne ✈️🇺🇸",
+          promoEligible: true,
+          type: "🍁 Static 70/130",
+          image: "ProductGP.jpg",
+          video: "VideoGP.mov",
+          description:   "🍁 Static Premium 70/130",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
           ],
         },
       ],
@@ -785,6 +785,34 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentFarmId = null; // Garde en mémoire la farm sélectionnée
   let appliedPromo = null; // Pour suivre le code promo
   let paymentMethod = "Espèce"; // Méthode de paiement par défaut
+
+  // Sous-catégories par farm : conserve intégralement chaque fiche produit.
+  // Place les fichiers de logos dans le même dossier que index.html.
+  const farmLogos = {
+    "CaliDream 💫": "LogoReel.jpg",
+    "TerpValley 🏜️": "FarmTerpValley.jpg",
+    "ByUsForYou 🛍️": "FarmByUsForYou.jpg",
+    "HashForceOne ✈️🇺🇸": "FarmHashForceOne.jpg",
+  };
+
+  ["Static", "HashUS"].forEach((categoryId) => {
+    const category = appData.find((c) => c.id === categoryId);
+    if (!category || !Array.isArray(category.products)) return;
+    const groups = new Map();
+    for (const product of category.products) {
+      const farmName = product.farm || "Autres farms";
+      if (!groups.has(farmName)) groups.set(farmName, []);
+      groups.get(farmName).push(product);
+    }
+    category.farms = [...groups].map(([name, products], index) => ({
+      id: `farm-${categoryId}-${index}`,
+      name,
+      image: farmLogos[name] || "",
+      products,
+    }));
+    // Les produits sont désormais accessibles depuis category.farms.
+    delete category.products;
+  });
 
   // --- DÉFINIS TES CODES PROMO ICI ---
   const validPromoCodes = {
@@ -1168,7 +1196,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Structure : Icone | Nom + Badge | Flèche
       btn.innerHTML = `
             <div class="farm-btn-left">
-                
+                ${farm.image ? `<img class="farm-logo" src="${farm.image}" alt="Logo ${farm.name}" onerror="this.style.display='none'">` : ""}
                 <div class="farm-btn-info">
                     <span class="farm-btn-title">${farm.name}</span>
                     <span class="farm-btn-subtitle">${farm.badgeText || countText}</span>

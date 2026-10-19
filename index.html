@@ -1500,6 +1500,33 @@
 .current-price {
     font-weight: 800;
 }
+    
+        /* Logos cliquables des sous-catégories (farms) */
+        .farm-list-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            min-height: 100px;
+            border-radius: 16px;
+            border: 1px solid #9b48d5;
+            background: linear-gradient(135deg, #25103d, #45185b);
+            cursor: pointer;
+        }
+        .farm-btn-left { display: flex; align-items: center; gap: 16px; min-width: 0; }
+        .farm-logo {
+            width: 76px;
+            height: 76px;
+            object-fit: contain;
+            flex-shrink: 0;
+            border-radius: 14px;
+            background: rgba(0,0,0,.25);
+        }
+        .farm-btn-info { display: flex; flex-direction: column; gap: 7px; }
+        .farm-btn-title { color: white; font-weight: 700; }
+        .farm-btn-subtitle { color: #dbb6f5; font-size: .85rem; }
+        .farm-btn-right { color: white; }
+
     </style>
 </head>
 
