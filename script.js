@@ -58,24 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       products: [
          {
-          id: "Purple Dream💜✨",
-          flag: "🇺🇸",
-          name: "Purple Dream💜✨",
-          farm: "CaliDream 💫",
-          promoEligible: true,
-          type: "👑 Static USA",
-          image: "ProductPD.png",
-          video: "VideoPD.mov",
-          description:   "Static USA exclusif C.D 🦅",
-          tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
-          ],
-        },
-         {
           id: "FFx26mm 🍒🍊🏔️",
           flag: "🇲🇦",
           name: "FFx26mm 🍒🍊🏔️",
@@ -293,6 +275,24 @@ document.addEventListener("DOMContentLoaded", function () {
     image: "CategJauneUsa.png",
 
       products: [
+         {
+          id: "Purple Dream💜✨",
+          flag: "🇺🇸",
+          name: "Purple Dream💜✨",
+          farm: "CaliDream 💫",
+          promoEligible: true,
+          type: "👑 Static USA",
+          image: "ProductPD.png",
+          video: "VideoPD.mov",
+          description:   "Static USA exclusif C.D 🦅",
+          tarifs: [
+            { weight: "2G", price: 80.0 },
+            { weight: "5G", price: 170.0 },
+            { weight: "10G", price: 340.0 },
+            { weight: "50G", price: 1350.0 },
+            { weight: "100G", price: 2500.0 },
+          ],
+        },
         {
           id: "Wpff 90-73 🔱",
           flag: "🇺🇸",
