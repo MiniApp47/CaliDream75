@@ -6,6 +6,67 @@ document.addEventListener("DOMContentLoaded", function () {
   tg.setHeaderColor("#14072a");
   tg.setBackgroundColor("#06031c");
 
+  // 🎁 NOTIFICATION CALIDREAM
+function showWelcomeOffer() {
+    const overlay = document.createElement("div");
+
+    overlay.style.cssText = `
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        padding: 20px;
+    `;
+
+    overlay.innerHTML = `
+        <div style="
+            background: linear-gradient(145deg, #2a0b45, #14072a);
+            border: 2px solid #a62bdd;
+            border-radius: 22px;
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 0 30px #a62bdd80;
+        ">
+            <h2>🎁😼 OFFRE CALIDREAM 😼🎁</h2>
+
+            <p style="font-weight:bold;">
+                Pour toutes les commandes :
+            </p>
+
+            <p>
+                Un paquet de cigarettes, un paquet de feuille
+                et un grinder offert 🎁
+            </p>
+
+            <button id="close-welcome-offer" style="
+                background: linear-gradient(90deg, #8e28da, #f06d1d);
+                border: none;
+                border-radius: 12px;
+                padding: 15px;
+                color: white;
+                font-weight: bold;
+                width: 100%;
+                cursor: pointer;
+                margin-top: 15px;
+            ">
+                Découvrir la boutique ✨
+            </button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    document.getElementById("close-welcome-offer")
+        .addEventListener("click", () => overlay.remove());
+}
+
   const progressBar = document.getElementById("myBar");
   const loader = document.getElementById("page-loader");
 
@@ -23,18 +84,38 @@ document.addEventListener("DOMContentLoaded", function () {
       loader.style.transition = "opacity 0.5s ease";
 
       setTimeout(() => {
-        loader.style.display = "none";
-        loader.classList.remove("active");
-        // Affiche la page Home par défaut
-        document.getElementById("page-home").classList.add("active");
-      }, 500); // Attend la fin du fondu
+    loader.style.display = "none";
+    loader.classList.remove("active");
+
+    document.getElementById("page-home").classList.add("active");
+
+    // 🎁 Affiche l'offre après le chargement
+    showWelcomeOffer();
+
+}, 500);
     }
   }, 2600); // 2600ms = 2.5s d'animation + 0.1s de délai
 
   // --- CONFIGURATION DES LIENS DE CONTACT ---
   // Liens CaliDream : anciens liens retirés.
   // Ajoute ici les nouveaux réseaux quand tu les auras.
-  const contactLinks = [];
+  const contactLinks = [
+{
+      name: "WHATSAPP 📞",
+      url: "https://wa.me/33743914796",
+      id: "whatsapp",
+      className: "whatsapp", // Il faudra peut-être ajouter ce CSS (Jaune)
+      text: "WHATSAPP 📞",
+    },
+{
+      name: "SIGNAL 📶",
+      url: "https://signal.me/#eu/hdSnPM2SMS8koBOkAsFTQuYu0L3ImwOpdmxJktwjHX1NKtx92RpLEpRNqXAAVaGn",
+      id: "signal",
+      className: "signal", // Il faudra peut-être ajouter ce CSS (Jaune)
+      text: "SIGNAL 📶",
+    },
+
+  ];
 
   // --- DONNÉES DE L'APPLICATION (CALIDREAM) ---
   const appData = [
@@ -312,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function () {
               { name: 'Rhum baba', emoji: '🍹🎋', colorClass: 'style-gold' }
                 ],
           tarifs: [
-            { weight: "2g", price: 70.0 },
+            { weight: "2g", price: 80.0 },
             { weight: "5g", price: 170.0 },
             { weight: "10g", price: 320.0 },
           ],
@@ -764,8 +845,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "HashForceOne ✈️🇺🇸": "FarmHashForceOne.jpg",
   };
 
-  ["Static", "HashUS"].forEach((categoryId) => {
-    const category = appData.find((c) => c.id === categoryId);
+["Static", "Frozen", "HashUS"].forEach((categoryId) => {
+      const category = appData.find((c) => c.id === categoryId);
     if (!category || !Array.isArray(category.products)) return;
     const groups = new Map();
     for (const product of category.products) {
@@ -2200,7 +2281,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clic sur "Confirmer la commande" (VERSION WHATSAPP DIRECT)
     if (target.closest("#confirm-order-button")) {
       // 1. TON NUMÉRO WHATSAPP (Format international sans le +)
-      const myPhoneNumber = ""; // Ajoute ici le nouveau numéro WhatsApp CaliDream sans le +
+      const myPhoneNumber = "33743914796"; // Ajoute ici le nouveau numéro WhatsApp CaliDream sans le +
 
       // 2. On prépare le message
       let message = formatOrderMessage();
