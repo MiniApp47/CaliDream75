@@ -1408,15 +1408,18 @@ function showWelcomeOffer() {
       ? product.images : (product.image ? [product.image] : []);
     const videos = (product.videos && product.videos.length)
       ? product.videos : (product.video ? [product.video] : []);
-    const media = [
-      ...images.map(src => ({ kind: "image", src })),
-      ...videos.map(src => ({ kind: "video", src }))
-    ];
-    if (isMidShelf) media.sort((a, b) => (a.kind === "video" ? -1 : 1) - (b.kind === "video" ? -1 : 1));
+    // MidShelf US : uniquement la vidéo sur la fiche produit.
+    // Les images restent utilisées sur les cartes de la boutique.
+    const media = isMidShelf && videos.length
+      ? videos.map(src => ({ kind: "video", src }))
+      : [
+          ...images.map(src => ({ kind: "image", src })),
+          ...videos.map(src => ({ kind: "video", src }))
+        ];
     const hasMedia = media.length > 0;
     const galleryHTML = media.map((item, index) => item.kind === "image"
       ? `<div class="gallery-item"><img src="${item.src}" alt="${product.name}" loading="${index === 0 ? 'eager' : 'lazy'}"></div>`
-      : `<div class="gallery-item"><video controls playsinline preload="metadata" poster="${product.image || ''}" ${isMidShelf && index === 0 ? 'autoplay muted' : ''}><source src="${item.src}" type="${/\.mov(?:\?|$)/i.test(item.src) ? 'video/quicktime' : 'video/mp4'}"></video></div>`
+      : `<div class="gallery-item"><video controls playsinline preload="metadata" ${isMidShelf ? '' : `poster="${product.image || ''}"`} ${isMidShelf && index === 0 ? 'autoplay muted' : ''}><source src="${item.src}" type="${/\.mov(?:\?|$)/i.test(item.src) ? 'video/quicktime' : 'video/mp4'}"></video></div>`
     ).join("");
 
     // --- 2. LE RESTE (OPTIONS, DESCRIPTION, TARIFS) ---
