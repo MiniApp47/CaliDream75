@@ -1402,49 +1402,22 @@ function showWelcomeOffer() {
     document.getElementById("product-page-title").innerText = product.name;
     const detailsContainer = document.getElementById("product-details-content");
 
-    // --- 1. GESTION INTELLIGENTE DES MÉDIAS ---
-    let galleryHTML = "";
-    let hasMedia = false;
-
-    // Images
-    let mediaItems = [];
-    if (product.images && product.images.length > 0) {
-      mediaItems = product.images;
-    } else if (product.image && product.image !== "") {
-      mediaItems = [product.image];
-    }
-
-    if (mediaItems.length > 0) {
-      hasMedia = true;
-      galleryHTML += mediaItems
-        .map(
-          (imgSrc) => `
-                <div class="gallery-item"><img src="${imgSrc}" alt="${product.name}"></div>
-            `,
-        )
-        .join("");
-    }
-
-    // Vidéos
-    if (product.videos && product.videos.length > 0) {
-      hasMedia = true;
-      product.videos.forEach((videoSrc) => {
-        galleryHTML += `
-                    <div class="gallery-item">
-                        <video controls playsinline poster="${product.image || ""}">
-                            <source src="${videoSrc}" type="video/mp4">
-                        </video>
-                    </div>`;
-      });
-    } else if (product.video && product.video !== "") {
-      hasMedia = true;
-      galleryHTML += `
-                <div class="gallery-item">
-                    <video controls playsinline poster="${product.image || ""}">
-                        <source src="${product.video}" type="video/mp4">
-                    </video>
-                </div>`;
-    }
+    // Galerie : vidéo prioritaire pour les produits MidShelf US.
+    const isMidShelf = product.type === "MidShelf US";
+    const images = (product.images && product.images.length)
+      ? product.images : (product.image ? [product.image] : []);
+    const videos = (product.videos && product.videos.length)
+      ? product.videos : (product.video ? [product.video] : []);
+    const media = [
+      ...images.map(src => ({ kind: "image", src })),
+      ...videos.map(src => ({ kind: "video", src }))
+    ];
+    if (isMidShelf) media.sort((a, b) => (a.kind === "video" ? -1 : 1) - (b.kind === "video" ? -1 : 1));
+    const hasMedia = media.length > 0;
+    const galleryHTML = media.map((item, index) => item.kind === "image"
+      ? `<div class="gallery-item"><img src="${item.src}" alt="${product.name}" loading="${index === 0 ? 'eager' : 'lazy'}"></div>`
+      : `<div class="gallery-item"><video controls playsinline preload="metadata" poster="${product.image || ''}" ${isMidShelf && index === 0 ? 'autoplay muted' : ''}><source src="${item.src}" type="${/\.mov(?:\?|$)/i.test(item.src) ? 'video/quicktime' : 'video/mp4'}"></video></div>`
+    ).join("");
 
     // --- 2. LE RESTE (OPTIONS, DESCRIPTION, TARIFS) ---
 
@@ -1520,8 +1493,11 @@ function showWelcomeOffer() {
 
     // --- 3. INJECTION (On cache la galerie si pas de média) ---
     detailsContainer.innerHTML = `
-            ${hasMedia ? `<div class="product-gallery-wrapper">${galleryHTML}</div>` : ""}
-            ${hasMedia ? `<div class="gallery-counter">Swipe ➡️</div>` : ""}
+            ${hasMedia ? `<div class="product-gallery-stage">
+                <div class="product-gallery-wrapper">${galleryHTML}</div>
+                ${media.length > 1 ? `<button type="button" class="gallery-arrow gallery-arrow-prev" aria-label="Média précédent" hidden>❮</button><button type="button" class="gallery-arrow gallery-arrow-next" aria-label="Média suivant">❯</button>` : ""}
+              </div>` : ""}
+            ${media.length > 1 ? `<div class="gallery-counter" aria-live="polite">1 / ${media.length} · Glisser pour voir la suite</div>` : ""}
             
             <div class="name" style="margin-top: ${hasMedia ? "0" : "20px"}">${product.name}</div>
             <div class="farm">${product.farm}</div>
@@ -1532,6 +1508,35 @@ function showWelcomeOffer() {
         `;
 
     showPage("page-product");
+
+    // Navigation tactile et flèches, visibles uniquement s'il reste un média.
+    if (media.length > 1) {
+      const gallery = detailsContainer.querySelector(".product-gallery-wrapper");
+      const prev = detailsContainer.querySelector(".gallery-arrow-prev");
+      const next = detailsContainer.querySelector(".gallery-arrow-next");
+      const counter = detailsContainer.querySelector(".gallery-counter");
+      const updateGallery = () => {
+        const index = Math.max(0, Math.min(media.length - 1,
+          Math.round(gallery.scrollLeft / Math.max(1, gallery.clientWidth))));
+        prev.hidden = index === 0;
+        next.hidden = index === media.length - 1;
+        counter.textContent = `${index + 1} / ${media.length} · Glisser pour voir la suite`;
+        gallery.querySelectorAll("video").forEach(video => {
+          const visible = video.closest(".gallery-item") === gallery.children[index];
+          if (!visible) video.pause();
+          else if (isMidShelf && video.muted && video.paused) video.play().catch(() => {});
+        });
+      };
+      const navigate = direction => {
+        const index = Math.round(gallery.scrollLeft / Math.max(1, gallery.clientWidth));
+        const target = Math.max(0, Math.min(media.length - 1, index + direction));
+        gallery.children[target].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+      };
+      prev.addEventListener("click", () => navigate(-1));
+      next.addEventListener("click", () => navigate(1));
+      gallery.addEventListener("scroll", updateGallery, { passive: true });
+      updateGallery();
+    }
 
     // Réattache les événements (pour les variantes de couleurs)
     if (product.jars && product.jars.length > 0) {
