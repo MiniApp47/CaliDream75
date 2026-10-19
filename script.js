@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- DONNÉES DE L'APPLICATION (CALIDREAM) ---
   const appData = [
-    {
+   /*  {
     id: "DryPremium",
     name: "Dry premium",
     type: "DryPremium",
@@ -46,21 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
     image: "Categ3X.png",
 
       products: [
-       /*  {
-          id: "🧠🍀AMNESIA CORE CUT 🍀🧠",
-          flag: "🇳🇱",
-          name: "🧠🍀 AMNESIA CORE CUT 🍀🧠",
-          farm: "🌾 No Farm 🌾",
-          promoEligible: true,
-          type: "Weed",
-          image: "ProductCore.png",
-          video: "VideoCore.mp4",
-          description:
-            "💎🔥 Considérée par de nombreux connaisseurs comme l’une des meilleures expressions de l’Amnesia, la Amnesia Core Cut est une sélection d’élite recherchée pour son profil terpénique puissant et son effet cérébral particulièrement intense. 🔥💎\n\n ✨ Les effets\n\n 🚀 Montée rapide et énergique\n 😄 Euphorie marquée\n 🧠 Stimulation mentale puissante\n 🎨 Créativité et concentration accrues\n 🗣️ Effet social apprécié des amateurs de sativas\n\n 👃 Les arômes\n\n 🍊 Agrumes frais et zestés\n 🌿 Notes Haze classiques\n 🌶️ Légères touches épicées et encensées\n\n 🌱 Pourquoi elle est si recherchée ? \n\n • Sélection réputée pour sa stabilité \n • Profil aromatique particulièrement intense \n • Forte production de résine ✨ \n • Expression fidèle de l’esprit Amnesia « old school » \n • Très appréciée des amateurs de Haze européennes\n\n 🏆 Pour les connaisseurs\n La Core Cut est souvent citée parmi les meilleures coupes d’Amnesia grâce à son équilibre entre puissance, saveurs citronnées explosives et effet mental clair. Beaucoup la considèrent comme une référence lorsqu’on parle de vraie Amnesia de haut niveau.\n\n ⭐ En résumé :\n Une Amnesia premium, ultra citronnée, résineuse et cérébrale, recherchée par les amateurs de Haze authentiques et les passionnés de génétiques européennes. 🔥⚡🧠💎🌿",
-          tarifs: [{ weight: "10g", price: 70.0 }],
-        }, */
+       
       ],
-    },
+    }, */
     {
     id: "Static",
     name: "Static 🥇",
@@ -556,7 +544,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       ],
     },
-    {
+   /*  {
     id: "Divers",
     name: "Divers💎",
     type: "Divers",
@@ -564,27 +552,8 @@ document.addEventListener("DOMContentLoaded", function () {
     image: "CategHash.png",
 
       products: [
-       /*  {
-          id: "SPRITZER 🍸",
-          flag: "🇲🇦",
-          name: "SPRITZER 🍸",
-          farm: "🌾 No Farm 🌾",
-          promoEligible: true,
-          type: "3xFiltre",
-          image: "ProductSP.png",
-          video: "VideoSP.mov",
-          description:
-                "🍸✨ SPRITZER — DRY SIFT ✨🍸\n\nUne sélection 3X Filtre au profil frais, fruité et raffiné. Spritzer se distingue par une belle vivacité aromatique, une touche légèrement sucrée et une identité moderne qui le rend particulièrement agréable pour les amateurs de profils expressifs. 🇲🇦🔥\n\n👃 Profil aromatique :\n🍋 Notes fraîches et zestées\n🍇 Touche fruitée légère\n🍬 Fond sucré discret\n🌿 Nuance végétale propre\n✨ Finition élégante et parfumée\n\n👅 Goût :\nEn bouche, Spritzer développe une attaque fraîche et aromatique, avec une belle présence fruitée et une rondeur légère qui équilibre l’ensemble. Le profil reste propre, vif et agréable, avec une finale douce et parfumée. 😮‍💨🍸\n\n✨ Texture & qualité :\n💎 3X Filtre soigneusement sélectionné\n🤲 Texture souple et homogène\n🌈 Arômes frais bien conservés\n☁️ Dégustation douce et parfumée\n🔥 Profil propre, moderne et régulier\n\n🏆 Le verdict :\nUne 3X Filtre fraîche et élégante, idéale pour ceux qui aiment les profils fruités, légers et bien travaillés. Spritzer combine fraîcheur, gourmandise et finition premium dans une sélection très agréable. 🍸✨🔥",
-          tarifs: [
-            { weight: "5G", price: 50.0 },
-            { weight: "10G", price: 80.0 },
-            { weight: "20G", price: 140.0 },
-            { weight: "50G", price: 250.0 },
-            { weight: "100G", price: 400.0 },
-          ],
-        }, */
       ],
-    },
+    }, */
      ];
 
 
