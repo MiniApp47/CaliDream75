@@ -374,11 +374,11 @@ function showWelcomeOffer() {
           video: "VideoPD.mov",
           description:   "Static USA exclusif C.D 🦅",
           tarifs: [
-            { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
-            { weight: "50G", price: 1350.0 },
-            { weight: "100G", price: 2500.0 },
+            { weight: "2G", price: 60.0 },
+            { weight: "5G", price: 140.0 },
+            { weight: "10G", price: 260.0 },
+            { weight: "50G", price: 1150.0 },
+            { weight: "100G", price: 2200.0 },
           ],
         },
         {
