@@ -114,6 +114,13 @@ function showWelcomeOffer() {
       className: "signal", // Il faudra peut-être ajouter ce CSS (Jaune)
       text: "SIGNAL 📶",
     },
+{
+      name: "Telegram 🌐",
+      url: "https://t.me/+0orhsfFLa1xjMWRk",
+      id: "telegram",
+      className: "telegram", // Il faudra peut-être ajouter ce CSS (Jaune)
+      text: "Telegram 🌐",
+    },
 
   ];
 
