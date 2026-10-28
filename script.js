@@ -830,6 +830,118 @@ function showWelcomeOffer() {
     } */
  
 
+
+  // PACKS : prix et compositions. Les packs utilisent le panier existant.
+  const presentationPacks = [
+    { id: "terpvalley", price: 170, title: "Pack 1 — TerpValley 🏜️", logo: "FarmTerpValley.jpg", subtitle: "11 variétés · 11 g (8 g Frozen + 3 g Static)", sections: [
+      { title: "FreshFrozen Premium — 8 g", items: ["ICC x TropCherry 🍦🍒 — 1 g", "SB x Gold Cherry 🔱🍊🍒🟣✨ — 1 g", "Fanta 🥤🧡 — 1 g", "MaroccanPeach 🇲🇦🍑 — 1 g", "Maracuya 🥭🌴 — 1 g", "GMO 🧄🧅⛽️ — 1 g", "MelonZ 🍈🍭 — 1 g", "Permanant Maker 🍬🇺🇸 — 1 g"] },
+      { title: "Static Premium — 3 g", items: ["WatermelonZ 🍉🍭 — 1 g", "Slapz 💥⛽️ — 1 g", "FFx26mm 🍒🍊🏔️ — 1 g"] }
+    ] },
+    // La sélection affichée contient 7 variétés : 6 x 1 g + 1 x 2 g = 8 g.
+    { id: "hashforceone", price: 270, title: "Pack 2 — HashForceOne ✈️", logo: "FarmHashForceOne.jpg", subtitle: "7 variétés · 8 g au total", sections: [
+      { title: "Sélection HashForceOne — 8 g", items: ["GUSHERS PIE — 1 g", "JEALOUSY — 1 g", "CEREAL MILK — 1 g", "BERRY DRIP — 1 g", "ZESTO — 1 g", "VELVET SKY — 1 g", "SUNSET Z — 2 g"] }
+    ] },
+    { id: "byusforyou", price: 230, title: "Pack 3 — ByUsForYou 💎", logo: "FarmByUsForYou.jpg", subtitle: "7 variétés · 7 g (4 g FS + 3 g WPFF 90/73)", sections: [
+      { title: "Full Spectrum WPFF S.S — 4 g", items: ["Yellow Fresca 💛🍍🍈 — 1 g", "Gaznivore ⛽️🦖 — 1 g", "PinkChardonay 🍾🌷⛽️ — 1 g", "Lemon Incest ⛽️🍋 — 1 g"] },
+      { title: "WPFF SingleSource 90-73 — 3 g", items: ["Gaznivore ⛽️🦖 — 1 g", "PinkChardonay 🍾🌷⛽️ — 1 g", "Rhum Baba 🍹🎋 — 1 g"] }
+    ] },
+    { id: "calius", price: 90, title: "Pack 4 — Cali US 🇺🇸", logo: "", subtitle: "MidShelf US NoBrand 🏆 · 4 variétés, 8 g au total", sections: [
+      { title: "MidShelf US NoBrand — 8 g", items: ["PinkLady 🙋‍♀️🇺🇸 — 2 g", "KimTech ⚡️🇺🇸 — 2 g", "Lemon Eid 🍋🇺🇸 — 2 g", "Purple Cream 💜🍦🇺🇸 — 2 g"] }
+    ] },
+    { id: "mixzepek", price: 280, title: "Pack 5 — Mix Zepek 🔥", logo: "", subtitle: "Pour les gros pek · sélection mixte à personnaliser", sections: [
+      { title: "Composition annoncée", items: ["3 variétés Static TerpValley au choix", "3 variétés HashForceOne au choix", "1 variété WPFF Full Spectrum au choix", "1 variété WPFF 90-73 au choix", "Static US Purple Dream", "3 variétés Cali au choix"] }
+    ] }
+  ];
+  const packsGiftLabel = "🎁 Livré avec cigarette, feuilles et briquet";
+  appData.unshift({ id: "Packs", name: "PACKS 🎁", type: "Packs", quality: "PACKS 🎁", image: "CategPack.png" });
+  let selectedPresentationPack = null;
+
+  // Les packs restent présentés avec leurs détails et ont un bouton d'ajout au panier.
+  function renderPresentationPacks() {
+    productListContainer.innerHTML = "";
+    const back = document.createElement("button");
+    back.type = "button";
+    back.className = "packs-back";
+    back.textContent = selectedPresentationPack ? "← Tous les packs" : "← Catégories";
+    productListContainer.appendChild(back);
+
+    if (!selectedPresentationPack) {
+      productListContainer.style.gridTemplateColumns = "repeat(2, minmax(0, 1fr))";
+      presentationPacks.forEach((pack) => {
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = "packs-presentation-card packs-product-card";
+        card.dataset.packId = pack.id;
+        const media = pack.logo
+          ? `<img src="${pack.logo}" alt="" loading="lazy" onerror="this.style.display='none'">`
+          : `<div class="packs-placeholder" aria-hidden="true">🎁</div>`;
+        const title = document.createElement("span");
+        title.className = "packs-card-caption";
+        const strong = document.createElement("strong");
+        strong.textContent = pack.title;
+        const small = document.createElement("small");
+        small.textContent = pack.subtitle;
+        const price = document.createElement("span");
+        price.className = "packs-card-price";
+        price.textContent = `🎁 ${pack.price.toFixed(2)} € 🎁`;
+        title.append(strong, small, price);
+        card.innerHTML = media;
+        card.appendChild(title);
+        productListContainer.appendChild(card);
+      });
+      return;
+    }
+
+    productListContainer.style.gridTemplateColumns = "1fr";
+    const pack = presentationPacks.find((p) => p.id === selectedPresentationPack);
+    if (!pack) return;
+    const detail = document.createElement("article");
+    detail.className = "packs-presentation-detail packs-product-detail";
+    if (pack.logo) {
+      const img = document.createElement("img");
+      img.className = "packs-detail-photo";
+      img.src = pack.logo;
+      img.alt = "";
+      img.onerror = () => img.remove();
+      detail.appendChild(img);
+    }
+    const h2 = document.createElement("h2");
+    h2.textContent = pack.title;
+    const info = document.createElement("p");
+    info.className = "packs-detail-subtitle";
+    info.textContent = pack.subtitle;
+    detail.append(h2, info);
+    pack.sections.forEach((section) => {
+      const h3 = document.createElement("h3");
+      h3.textContent = section.title;
+      const ul = document.createElement("ul");
+      section.items.forEach((name) => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        ul.appendChild(li);
+      });
+      detail.append(h3, ul);
+    });
+
+    // Tarif et bouton d'achat sous la composition du pack.
+    const priceLabel = document.createElement("p");
+    priceLabel.className = "packs-detail-price";
+    priceLabel.textContent = Number.isFinite(pack.price) && pack.price >= 0
+      ? `${pack.price.toFixed(2)} €`
+      : "Prix à confirmer";
+
+    const addButton = document.createElement("button");
+    addButton.type = "button";
+    addButton.className = "packs-add-to-cart";
+    addButton.dataset.packId = pack.id;
+    addButton.textContent = "🛒 Ajouter au panier";
+    const includedGift = document.createElement("p");
+    includedGift.className = "packs-included-gifts";
+    includedGift.textContent = packsGiftLabel;
+    detail.append(priceLabel, includedGift, addButton);
+    productListContainer.appendChild(detail);
+  }
+
   // --- VARIABLES D'ÉTAT ---
   let cart = [];
   let currentFilters = {
@@ -986,7 +1098,12 @@ function showWelcomeOffer() {
       filterContainer.querySelector(".back-to-farms-btn");
     if (existingBackBtnFarm) existingBackBtnFarm.remove();
 
-    if (currentView === "categories") {
+    if (currentView === "pack_presentation") {
+      searchFilterWrapper.style.display = "none";
+      farmFilterWrapper.style.display = "none";
+      qualityFilterWrapper.style.display = "none";
+      renderPresentationPacks();
+    } else if (currentView === "categories") {
       renderCategoryList();
 
       // --- GESTION DES FILTRES (Vue Catégorie) ---
@@ -1205,10 +1322,8 @@ function showWelcomeOffer() {
       card.className = "category-card";
       card.dataset.categoryId = category.id;
 
-      card.innerHTML = `
-                <img src="${category.image}" alt="${category.name}">
-              
-            `;
+      card.innerHTML = `<img src="${category.image}" alt="${category.name}" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('packs-image-missing')">`;
+      if (category.id === "Packs") card.classList.add("packs-category-card");
       productListContainer.appendChild(card);
     });
   }
@@ -1589,6 +1704,15 @@ function showWelcomeOffer() {
     }
   }
 
+  // Montant des articles chiffrés, sans présenter les packs non tarifés comme gratuits.
+  function formatCartTotal(amount) {
+    const knownAmount = `${amount.toFixed(2)}€`;
+    const hasPendingPack = cart.some((item) => item.pricePending);
+    return hasPendingPack
+      ? (amount > 0 ? `${knownAmount} + packs à confirmer` : "Prix des packs à confirmer")
+      : knownAmount;
+  }
+
   // Met à jour l'affichage du panier (CORRIGÉ : Cache l'image si vide)
   function renderCart() {
     const cartContainer = document.getElementById("cart-items-container");
@@ -1607,8 +1731,9 @@ function showWelcomeOffer() {
                 
                 <div class="item-details">
                     <div class="name">${item.name}</div>
-                    <div class="gram" >${item.weight} - ${item.unitPrice.toFixed(2)}€</div>
-                    <div class="price">${item.totalPrice.toFixed(2)}€</div>
+                    <div class="gram" >${item.weight} - ${item.pricePending ? "Prix à confirmer" : `${item.unitPrice.toFixed(2)}€`}</div>
+                    ${item.includedGift ? `<div class="packs-cart-gifts">${item.includedGift}</div>` : ""}
+                    <div class="price">${item.pricePending ? "Prix à confirmer" : `${item.totalPrice.toFixed(2)}€`}</div>
                 </div>
                 <div class="quantity-selector">
                     <button class="quantity-btn" data-action="decrease" data-id="${item.id}">-</button>
@@ -1622,7 +1747,7 @@ function showWelcomeOffer() {
 
     const total = cart.reduce((sum, item) => sum + item.totalPrice, 0);
     document.getElementById("cart-total-price").innerText =
-      `${total.toFixed(2)}€`;
+      formatCartTotal(total);
     updateCartCount();
   }
 
@@ -1661,7 +1786,7 @@ function showWelcomeOffer() {
     document.getElementById("confirmation-items-count").innerText =
       `${totalItems} article${totalItems > 1 ? "s" : ""}`;
     document.getElementById("confirmation-total-price").innerText =
-      `${totalPrice.toFixed(2)}€`;
+      formatCartTotal(totalPrice);
 
     // Liste des articles
     const itemsList = document.getElementById("confirmation-items-list");
@@ -1674,7 +1799,8 @@ function showWelcomeOffer() {
             <div class="item-details">
                 <div>${index + 1}. ${item.name}</div>
                 <div>Quantité: ${item.quantity}x ${item.weight}</div>
-                <div>Prix unitaire: ${item.unitPrice.toFixed(2)}€</div>
+                <div>Prix unitaire: ${item.pricePending ? "À confirmer" : `${item.unitPrice.toFixed(2)}€`}</div>
+                ${item.includedGift ? `<div class="packs-cart-gifts">${item.includedGift}</div>` : ""}
             </div>
         </div>
     `,
@@ -1709,7 +1835,7 @@ function showWelcomeOffer() {
     let summaryHTML = `
         <div class="summary-line">
             <span>Sous-total:</span>
-            <span>${subTotal.toFixed(2)}€</span>
+            <span>${formatCartTotal(subTotal)}</span>
         </div>
     `;
     if (discount > 0) {
@@ -1723,7 +1849,7 @@ function showWelcomeOffer() {
     summaryHTML += `
         <div class="summary-line total">
             <span>💰 Total final:</span>
-            <span>${totalPrice.toFixed(2)}€</span>
+            <span>${formatCartTotal(totalPrice)}</span>
         </div>
     `;
     summaryContainer.innerHTML = summaryHTML;
@@ -1847,6 +1973,41 @@ function showWelcomeOffer() {
 
   // --- LOGIQUE DU PANIER ---
 
+  function addPresentationPackToCart(packId) {
+    const pack = presentationPacks.find((p) => p.id === packId);
+    if (!pack) return;
+
+    const cartItemId = `presentation-pack-${pack.id}`;
+    const existingItem = cart.find((item) => item.id === cartItemId);
+    const pricePending = !(Number.isFinite(pack.price) && pack.price >= 0);
+    const unitPrice = pricePending ? 0 : pack.price;
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+      existingItem.totalPrice = existingItem.quantity * existingItem.unitPrice;
+    } else {
+      cart.push({
+        id: cartItemId,
+        productId: cartItemId,
+        name: pack.title,
+        image: pack.logo || "",
+        weight: "Pack complet",
+        includedGift: packsGiftLabel,
+        quantity: 1,
+        unitPrice,
+        totalPrice: unitPrice,
+        pricePending,
+        packContents: pack.sections.map((section) => ({
+          title: section.title,
+          items: [...section.items],
+        })),
+      });
+    }
+    renderCart();
+    tg.HapticFeedback.notificationOccurred("success");
+    showNotification("✅ Pack ajouté au panier !");
+  }
+
   // Ajoute le paramètre 'variant' à la fin
   function addToCart(productId, weight, price, variant = null) {
     // L'ID du panier doit inclure la variante pour différencier (ex: 10g Gelato vs 10g Papaya)
@@ -1945,20 +2106,31 @@ function showWelcomeOffer() {
       message += `• Quantité: ${item.quantity}x ${item.weight}\n`;
 
       // Ligne 3 : Prix unitaire
-      message += `• Prix unitaire: ${item.unitPrice.toFixed(2)}€\n`;
+      message += `• Prix unitaire: ${item.pricePending ? "À confirmer" : `${item.unitPrice.toFixed(2)}€`}\n`;
 
       // Ligne 4 : Total de la ligne
-      message += `• Total: ${item.totalPrice.toFixed(2)}€\n\n`;
+      message += `• Total: ${item.pricePending ? "À confirmer" : `${item.totalPrice.toFixed(2)}€`}\n`;
+      // Le détail du pack est transmis avec la commande WhatsApp.
+      if (item.packContents) {
+        item.packContents.forEach((section) => {
+          message += `  ${section.title} :\n`;
+          section.items.forEach((name) => {
+            message += `  - ${name}\n`;
+          });
+        });
+      }
+      if (item.includedGift) message += `${item.includedGift}\n`;
+      message += "\n";
     });
 
     // Résumé financier
     // Si promo, on affiche le détail, sinon juste le total
     if (discount > 0) {
-      message += `Sous-total: ${subTotal.toFixed(2)}€\n`;
+      message += `Sous-total: ${formatCartTotal(subTotal)}\n`;
       message += `Réduction (${appliedPromo}): -${discount.toFixed(2)}€\n`;
-      message += `\n*💰 TOTAL: ${totalPrice.toFixed(2)}€*\n`;
+      message += `\n*💰 TOTAL: ${formatCartTotal(totalPrice)}*\n`;
     } else {
-      message += `*💰 TOTAL: ${totalPrice.toFixed(2)}€*\n`;
+      message += `*💰 TOTAL: ${formatCartTotal(totalPrice)}*\n`;
     }
 
     // Pied de page
@@ -2112,6 +2284,31 @@ function showWelcomeOffer() {
       return; // On arrête là pour ne pas déclencher d'autres clics
     }
 
+    // Bouton en bas de la fiche d'un pack : ajout au même panier que les produits.
+    const packAddButton = target.closest(".packs-add-to-cart");
+    if (packAddButton) {
+      addPresentationPackToCart(packAddButton.dataset.packId);
+      return;
+    }
+
+    // Navigation des packs de présentation
+    if (target.closest(".packs-back")) {
+      if (selectedPresentationPack) {
+        selectedPresentationPack = null;
+      } else {
+        currentView = "categories";
+        currentCategoryId = null;
+      }
+      renderHomePage();
+      return;
+    }
+    const packCard = target.closest(".packs-presentation-card");
+    if (packCard) {
+      selectedPresentationPack = packCard.dataset.packId;
+      renderHomePage();
+      return;
+    }
+
     // 1. Clic sur une carte CATÉGORIE
     const categoryCard = target.closest(".category-card");
     if (categoryCard) {
@@ -2119,7 +2316,11 @@ function showWelcomeOffer() {
         (c) => c.id === categoryCard.dataset.categoryId,
       );
 
-      if (category.products) {
+      if (category.id === "Packs") {
+        currentView = "pack_presentation";
+        currentCategoryId = category.id;
+        selectedPresentationPack = null;
+      } else if (category.products) {
         // Si la catégorie a des produits directement (pas de sous-catégorie)
         currentView = "simple_products"; // <-- NOUVEL ÉTAT
         currentCategoryId = category.id;
