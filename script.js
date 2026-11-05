@@ -582,7 +582,7 @@ function showWelcomeOffer() {
                         { weight: '20G', price: 210.00 },
                     ],
         },
-         {
+         /* {
           id: "Lemon Eid🍋🇺🇸",
           flag: "🇺🇸",
           name: "Lemon Eid🍋🇺🇸",
@@ -597,7 +597,7 @@ function showWelcomeOffer() {
                         { weight: '10G', price: 120.00 },
                         { weight: '20G', price: 210.00 },
                     ],
-        },
+        }, */
          {
           id: "KimTech⚡️🇺🇸",
           flag: "🇺🇸",
