@@ -566,7 +566,7 @@ function showWelcomeOffer() {
     image: "CategWeed.png",
 
       products: [
-         {
+        /*  {
           id: "Purple Cream💜🍦🇺🇸",
           flag: "🇺🇸",
           name: "Purple Cream💜🍦🇺🇸",
@@ -581,7 +581,7 @@ function showWelcomeOffer() {
                         { weight: '10G', price: 120.00 },
                         { weight: '20G', price: 210.00 },
                     ],
-        },
+        }, */
          /* {
           id: "Lemon Eid🍋🇺🇸",
           flag: "🇺🇸",
@@ -845,9 +845,9 @@ function showWelcomeOffer() {
       { title: "Full Spectrum WPFF S.S — 4 g", items: ["Yellow Fresca 💛🍍🍈 — 1 g", "Gaznivore ⛽️🦖 — 1 g", "PinkChardonay 🍾🌷⛽️ — 1 g", "Lemon Incest ⛽️🍋 — 1 g"] },
       { title: "WPFF SingleSource 90-73 — 3 g", items: ["Gaznivore ⛽️🦖 — 1 g", "PinkChardonay 🍾🌷⛽️ — 1 g", "Rhum Baba 🍹🎋 — 1 g"] }
     ] },
-    { id: "calius", price: 90, title: "Pack 4 — Cali US 🇺🇸", logo: "", subtitle: "MidShelf US NoBrand 🏆 · 4 variétés, 8 g au total", sections: [
+  /*   { id: "calius", price: 90, title: "Pack 4 — Cali US 🇺🇸", logo: "", subtitle: "MidShelf US NoBrand 🏆 · 4 variétés, 8 g au total", sections: [
       { title: "MidShelf US NoBrand — 8 g", items: ["PinkLady 🙋‍♀️🇺🇸 — 2 g", "KimTech ⚡️🇺🇸 — 2 g", "Lemon Eid 🍋🇺🇸 — 2 g", "Purple Cream 💜🍦🇺🇸 — 2 g"] }
-    ] },
+    ] }, */
     { id: "mixzepek", price: 280, title: "Pack 5 — Mix Zepek 🔥", logo: "", subtitle: "Pour les gros pek · sélection mixte à personnaliser", sections: [
       { title: "Composition annoncée", items: ["3 variétés Static TerpValley au choix", "3 variétés HashForceOne au choix", "1 variété WPFF Full Spectrum au choix", "1 variété WPFF 90-73 au choix", "Static US Purple Dream", "3 variétés Cali au choix"] }
     ] }
