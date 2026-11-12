@@ -145,6 +145,21 @@ function showWelcomeOffer() {
     image: "CategDouble.png",
 
       products: [
+                      {
+  id: 'Olive Double Static 🫒',
+  flag: '🇲🇦',
+  name: 'Olive Double Static 🫒',
+  farm: "🌾 No Farm 🌾",
+  promoEligible: true,
+  type: 'STATIC',
+  image: 'ProductODS.png',
+  video: 'VideoODS.mp4',
+  description:
+    "🫒🧤 OLIVE DOUBLE STATIC — PREMIUM 🧤🫒\n\nUne sélection Double Static au format olive, inspirée du savoir-faire marocain et de l'univers des résines haut de gamme. Olive Double Static évoque une identité aromatique profonde et raffinée, mêlant notes boisées, douceur gourmande et caractère résineux. 🇲🇦💎✨\n\n👃 Profil aromatique :\n🍯 Notes douces et légèrement miellées\n🌰 Nuances de noisette et fruits à coque\n🍫 Touches chocolatées gourmandes\n🌿 Fond végétal et résineux\n🪵 Accents boisés et terreux\n🔥 Finition aromatique profonde\n\n🌈 Signature aromatique :\nUn profil imaginé autour d'une ouverture douce et gourmande, associant miel, noisette et nuances chocolatées. Des notes boisées et résineuses viennent compléter cette composition, rappelant les profils traditionnels marocains. 🫒🍯\n\n🧤 Texture & présentation :\n💎 Catégorie Double Static\n🫒 Format olive original\n🇲🇦 Inspiration marocaine\n🌿 Univers résineux et authentique\n✨ Présentation soignée\n👑 Identité premium et raffinée\n\n🏆 Le verdict :\nUne identité élégante et pleine de caractère, qui associe douceur miellée, nuances boisées et profondeur résineuse. Olive Double Static se distingue par son format original et son inspiration marocaine traditionnelle. 🫒🧤🇲🇦💎",
+  tarifs: [
+    { weight: '1 olive', price: 130.00 },
+  ]
+},
          {
           id: "FFx26mm 🍒🍊🏔️",
           flag: "🇲🇦",
