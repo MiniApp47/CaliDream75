@@ -584,14 +584,14 @@ function showWelcomeOffer() {
          {
           id: "GrandiFlora🇺🇸",
           flag: "🇺🇸",
-          name: "GrandiFlora🇺🇸",
+          name: "GrandiFlora 🌸👑🇺🇸",
           farm: "Cali Flowers☘️🇺🇸",
           promoEligible: true,
           type: "",
           image: "ProductGF.png",
           video: "VideoGF.mp4",
           description:
-                  "",
+                  "🌸👑 GRANDIFLORA — CALI FLOWERS PREMIUM 👑🌸\n\nUne sélection à l'identité florale, élégante et raffinée. GrandiFlora évoque un univers aromatique sophistiqué, mêlant douceur fruitée, nuances végétales et notes gourmandes. Une inspiration californienne au caractère distingué. 🇺🇸✨\n\n👃 Profil aromatique :\n🌸 Notes florales délicates\n🍇 Fruits noirs et raisin sucré\n🍦 Nuances crémeuses et vanillées\n🌿 Fond végétal frais\n🍯 Douceur légèrement miellée\n\n🌈 Signature aromatique :\nUn profil imaginé autour d'une ouverture florale et fruitée, accompagnée de nuances sucrées et crémeuses. L'ensemble rappelle un mélange de fleurs fraîches, de fruits mûrs et de gourmandise vanillée. 🌸🍇\n\n🌿 Identité & sélection :\n💎 Collection Cali Flowers\n🇺🇸 Inspiration californienne\n🌸 Univers floral et raffiné\n✨ Signature aromatique élégante\n\n🏆 Le verdict :\nUne identité distinguée qui associe fleurs, fruits noirs et douceur crémeuse dans un univers aromatique raffiné. 🌸👑💎",
                 tarifs: [
                         { weight: '5G', price: 70.00 },
                         { weight: '10G', price: 130.00 },
@@ -603,14 +603,14 @@ function showWelcomeOffer() {
          {
           id: "Animal Mints🇺🇸",
           flag: "🇺🇸",
-          name: "Animal Mints🇺🇸",
+          name: "Animal Mints 🐾🍃🇺🇸",
           farm: "Cali Flowers☘️🇺🇸",
           promoEligible: true,
           type: "",
           image: "ProductAM.png",
           video: "VideoAM.mp4",
           description:
-                  "",
+                  "🐾🍃 ANIMAL MINTS — CALI FLOWERS PREMIUM 🍃🐾\n\nUne sélection à l'identité fraîche, gourmande et pleine de caractère. Animal Mints évoque une association originale entre fraîcheur mentholée, douceur pâtissière et nuances végétales profondes. 🇺🇸✨\n\n👃 Profil aromatique :\n🍃 Menthe fraîche et végétale\n🍪 Notes biscuitées gourmandes\n🍦 Fond crémeux et vanillé\n🌿 Nuances herbacées\n🌰 Touches légèrement boisées\n\n🌈 Signature aromatique :\nUn profil imaginé autour d'une ouverture fraîche et végétale, suivie de notes biscuitées et crémeuses. Une composition qui rappelle les gourmandises à la menthe et les desserts vanillés. 🍃🍪\n\n🌿 Identité & sélection :\n💎 Collection Cali Flowers\n🇺🇸 Inspiration californienne\n❄️ Univers frais et mentholé\n🍪 Signature gourmande\n\n🏆 Le verdict :\nUne identité originale qui joue sur le contraste entre fraîcheur de la menthe, douceur biscuitée et nuances végétales. 🐾🍃✨",
                 tarifs: [
                         { weight: '5G', price: 70.00 },
                         { weight: '10G', price: 130.00 },
@@ -622,14 +622,14 @@ function showWelcomeOffer() {
          {
           id: "BlueBerry🇺🇸",
           flag: "🇺🇸",
-          name: "BlueBerry🇺🇸",
+          name: "BlueBerry 🫐💜🇺🇸",
           farm: "Cali Flowers☘️🇺🇸",
           promoEligible: true,
           type: "",
           image: "ProductBB.png",
           video: "VideoBB.mp4",
           description:
-                  "",
+                  "🫐💜 BLUEBERRY — CALI FLOWERS PREMIUM 💜🫐\n\nUne sélection à l'identité fruitée, douce et gourmande. BlueBerry évoque un univers aromatique inspiré des myrtilles mûres, des baies sauvages et des desserts aux fruits rouges. 🇺🇸✨\n\n👃 Profil aromatique :\n🫐 Myrtilles sucrées\n🍇 Raisin et fruits violets\n🍓 Nuances de fruits rouges\n🍬 Douceur candy fruitée\n🍦 Fond légèrement crémeux\n\n🌈 Signature aromatique :\nUn profil imaginé autour d'une ouverture fruitée dominée par les myrtilles, accompagnée de nuances de raisin sucré et d'une rondeur crémeuse rappelant les desserts aux baies. 🫐🍇\n\n🌿 Identité & sélection :\n💎 Collection Cali Flowers\n🇺🇸 Inspiration californienne\n🫐 Univers berry et fruité\n💜 Signature douce et gourmande\n\n🏆 Le verdict :\nUne identité fruitée qui met à l'honneur la myrtille, les fruits violets et la gourmandise des baies sucrées. 🫐💜✨",
                 tarifs: [
                         { weight: '5G', price: 70.00 },
                         { weight: '10G', price: 130.00 },
@@ -641,14 +641,14 @@ function showWelcomeOffer() {
          {
           id: "Seven Leaves🇺🇸",
           flag: "🇺🇸",
-          name: "Seven Leaves🇺🇸",
+          name: "Seven Leaves 🍁7️⃣🇺🇸",
           farm: "Cali Flowers☘️🇺🇸",
           promoEligible: true,
           type: "",
           image: "ProductSL.png",
           video: "VideoSL.mp4",
           description:
-                  "",
+                  "🍁7️⃣ SEVEN LEAVES — CALI FLOWERS PREMIUM 7️⃣🍁\n\nUne sélection à l'identité végétale, authentique et raffinée. Seven Leaves évoque un univers aromatique naturel, mêlant fraîcheur herbacée, notes boisées et douceur fruitée. Une inspiration botanique au caractère élégant. 🇺🇸✨\n\n👃 Profil aromatique :\n🌿 Notes végétales et herbacées\n🍋 Agrumes frais et légers\n🌲 Nuances boisées\n🍯 Fond légèrement sucré\n🌸 Touches florales discrètes\n\n🌈 Signature aromatique :\nUn profil imaginé autour d'une ouverture végétale et citronnée, accompagnée de nuances boisées et florales. L'ensemble évoque un jardin aromatique, entre fraîcheur naturelle et douceur discrète. 🌿🍋\n\n🌿 Identité & sélection :\n💎 Collection Cali Flowers\n🇺🇸 Inspiration californienne\n🍁 Univers botanique et naturel\n✨ Signature végétale raffinée\n\n🏆 Le verdict :\nUne identité authentique qui associe fraîcheur herbacée, agrumes et nuances boisées dans un univers botanique élégant. 🍁7️⃣💎",
                 tarifs: [
                         { weight: '5G', price: 70.00 },
                         { weight: '10G', price: 130.00 },
@@ -660,14 +660,14 @@ function showWelcomeOffer() {
          {
           id: "LIL22🇺🇸",
           flag: "🇺🇸",
-          name: "LIL22🇺🇸",
+          name: "LIL22 💎2️⃣2️⃣🇺🇸",
           farm: "Cali Flowers☘️🇺🇸",
           promoEligible: true,
           type: "",
           image: "ProductLL.png",
           video: "VideoLL.mp4",
           description:
-                  "",
+                  "💎2️⃣2️⃣ LIL22 — CALI FLOWERS PREMIUM 2️⃣2️⃣💎\n\nUne sélection à l'identité moderne, fruitée et originale. LIL22 évoque un univers aromatique inspiré des confiseries américaines, mêlant notes candy, fruits exotiques et nuances crémeuses. 🇺🇸✨\n\n👃 Profil aromatique :\n🍬 Bonbons fruités et sucrés\n🍇 Raisin et fruits noirs\n🍊 Agrumes doux\n🍦 Nuances vanillées et crémeuses\n🌿 Fond végétal discret\n\n🌈 Signature aromatique :\nUn profil imaginé autour d'une ouverture candy et fruitée, accompagnée de nuances d'agrumes et d'une douceur crémeuse. Une inspiration moderne qui rappelle les assortiments de confiseries aux fruits. 🍬🍇\n\n🌿 Identité & sélection :\n💎 Collection Cali Flowers\n🇺🇸 Inspiration californienne\n🍬 Univers candy et gourmand\n2️⃣2️⃣ Identité moderne et distinctive\n\n🏆 Le verdict :\nUne signature colorée et contemporaine qui associe fruits sucrés, agrumes et nuances crémeuses dans un univers gourmand. 💎2️⃣2️⃣✨",
                 tarifs: [
                         { weight: '5G', price: 70.00 },
                         { weight: '10G', price: 130.00 },
