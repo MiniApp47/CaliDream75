@@ -416,8 +416,6 @@ function showWelcomeOffer() {
                 ],
           tarifs: [
             { weight: "2g", price: 80.0 },
-            { weight: "5g", price: 170.0 },
-            { weight: "10g", price: 320.0 },
           ],
         },
         {
@@ -440,8 +438,6 @@ function showWelcomeOffer() {
                 ],
           tarifs: [
             { weight: "2g", price: 70.0 },
-            { weight: "5g", price: 140.0 },
-            { weight: "10g", price: 250.0 },
           ],
         },
          {
@@ -456,8 +452,6 @@ function showWelcomeOffer() {
           description:   "🍁 Static Premium 70/130",
           tarifs: [
             { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
             { weight: "50G", price: 1350.0 },
             { weight: "100G", price: 2500.0 },
           ],
@@ -474,8 +468,6 @@ function showWelcomeOffer() {
           description:   "🍁 Static Premium 70/130",
           tarifs: [
             { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
             { weight: "50G", price: 1350.0 },
             { weight: "100G", price: 2500.0 },
           ],
@@ -492,8 +484,6 @@ function showWelcomeOffer() {
           description:   "🍁 Static Premium 70/130",
           tarifs: [
             { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
             { weight: "50G", price: 1350.0 },
             { weight: "100G", price: 2500.0 },
           ],
@@ -510,8 +500,6 @@ function showWelcomeOffer() {
           description:   "🍁 Static Premium 70/130",
           tarifs: [
             { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
             { weight: "50G", price: 1350.0 },
             { weight: "100G", price: 2500.0 },
           ],
@@ -528,8 +516,6 @@ function showWelcomeOffer() {
           description:   "🍁 Static Premium 70/130",
           tarifs: [
             { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
             { weight: "50G", price: 1350.0 },
             { weight: "100G", price: 2500.0 },
           ],
@@ -546,8 +532,6 @@ function showWelcomeOffer() {
           description:   "🍁 Static Premium 70/130",
           tarifs: [
             { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
             { weight: "50G", price: 1350.0 },
             { weight: "100G", price: 2500.0 },
           ],
@@ -564,8 +548,6 @@ function showWelcomeOffer() {
           description:   "🍁 Static Premium 70/130",
           tarifs: [
             { weight: "2G", price: 80.0 },
-            { weight: "5G", price: 170.0 },
-            { weight: "10G", price: 340.0 },
             { weight: "50G", price: 1350.0 },
             { weight: "100G", price: 2500.0 },
           ],
