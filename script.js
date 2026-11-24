@@ -126,6 +126,111 @@ function showWelcomeOffer() {
 
   // --- DONNÉES DE L'APPLICATION (CALIDREAM) ---
   const appData = [
+       {
+    id: "ICE 🧊",
+    name: "ICE 🧊",
+    type: "ICE 🧊",
+    quality: "ICE 🧊",
+    image: "CategIce.png",
+
+      products: [
+        {
+          id: "HELL COOKIES⛽️🍪🇲🇦🇺🇸",
+          flag: "🇲🇦",
+          name: "HELL COOKIES⛽️🍪🇲🇦🇺🇸",
+          farm: "ByDr.🧑‍⚕️",
+          promoEligible: true,
+          type: "ICE 140-90 🏅",
+          image: "ProductHC.jpg",
+          video: "VideoHC.mp4",
+          description:   "ICE 140-90 First Wash handmad 🧤",
+          tarifs: [
+            { weight: "5G", price: 100.0 },
+            { weight: "10G", price: 180.0 },
+            { weight: "25G", price: 360.0 },
+          ],
+        },
+      ],
+    },
+     {
+    id: "Vapes ",
+    name: "Vapes 🌪️",
+    type: "Vapes 🌪️",
+    quality: "Vapes 🌪️",
+    image: "CategVape.png",
+
+      products: [
+         {
+          id: "Rainbow Belts 🌈🍬💜",
+          flag: "🇲🇦",
+          name: "Rainbow Belts 🌈🍬💜",
+          farm: "ByLeDoc.👨‍⚕️",
+          promoEligible: true,
+          type: "Vappe 1000mg 💨🏅",
+          image: "ProductRW.png",
+          video: "VideoRW.mp4",
+          description:   "Vappe 1000mg 💨🏅",
+          tarifs: [
+            { weight: "1", price: 50.0 },
+            { weight: "2", price: 90.0 },
+            { weight: "5", price: 200.0 },
+            { weight: "10", price: 350.0 },
+          ],
+        },
+         {
+          id: "Root Beer 🥤🤎🫧",
+          flag: "🇲🇦",
+          name: "Root Beer 🥤🤎🫧",
+          farm: "ByLeDoc.👨‍⚕️",
+          promoEligible: true,
+          type: "Vappe 1000mg 💨🏅",
+          image: "ProductRO.png",
+          video: "VideoRO.mp4",
+          description:   "Vappe 1000mg 💨🏅",
+          tarifs: [
+            { weight: "1", price: 50.0 },
+            { weight: "2", price: 90.0 },
+            { weight: "5", price: 200.0 },
+            { weight: "10", price: 350.0 },
+          ],
+        },
+         {
+          id: "Watermelon Z🍉❤️🍬",
+          flag: "🇲🇦",
+          name: "Watermelon Z🍉❤️🍬",
+          farm: "ByLeDoc.👨‍⚕️",
+          promoEligible: true,
+          type: "Vappe 1000mg 💨🏅",
+          image: "ProductWZZ.png",
+          video: "VideoWZZ.mp4",
+          description:   "Vappe 1000mg 💨🏅",
+          tarifs: [
+            { weight: "1", price: 50.0 },
+            { weight: "2", price: 90.0 },
+            { weight: "5", price: 200.0 },
+            { weight: "10", price: 350.0 },
+          ],
+        },
+         {
+          id: "Papaya Huasca 🥭🌴🧡",
+          flag: "🇲🇦",
+          name: "Papaya Huasca 🥭🌴🧡",
+          farm: "ByLeDoc.👨‍⚕️",
+          promoEligible: true,
+          type: "Vappe 1000mg 💨🏅",
+          image: "ProductPH.png",
+          video: "VideoPH.mp4",
+          description:   "Vappe 1000mg 💨🏅",
+          tarifs: [
+            { weight: "1", price: 50.0 },
+            { weight: "2", price: 90.0 },
+            { weight: "5", price: 200.0 },
+            { weight: "10", price: 350.0 },
+          ],
+        },
+       
+      ],
+    },
    /*  {
     id: "DryPremium",
     name: "Dry premium",
@@ -925,14 +1030,14 @@ function showWelcomeOffer() {
 
   // PACKS : prix et compositions. Les packs utilisent le panier existant.
   const presentationPacks = [
-    { id: "terpvalley", price: 170, title: "Pack 1 — TerpValley 🏜️", logo: "FarmTerpValley.jpg", subtitle: "11 variétés · 11 g (8 g Frozen + 3 g Static)", sections: [
+   /*  { id: "terpvalley", price: 170, title: "Pack 1 — TerpValley 🏜️", logo: "FarmTerpValley.jpg", subtitle: "11 variétés · 11 g (8 g Frozen + 3 g Static)", sections: [
       { title: "FreshFrozen Premium — 8 g", items: ["ICC x TropCherry 🍦🍒 — 1 g", "SB x Gold Cherry 🔱🍊🍒🟣✨ — 1 g", "Fanta 🥤🧡 — 1 g", "MaroccanPeach 🇲🇦🍑 — 1 g", "Maracuya 🥭🌴 — 1 g", "GMO 🧄🧅⛽️ — 1 g", "MelonZ 🍈🍭 — 1 g", "Permanant Maker 🍬🇺🇸 — 1 g"] },
       { title: "Static Premium — 3 g", items: ["WatermelonZ 🍉🍭 — 1 g", "Slapz 💥⛽️ — 1 g", "FFx26mm 🍒🍊🏔️ — 1 g"] }
-    ] },
+    ] }, */
     // La sélection affichée contient 7 variétés : 6 x 1 g + 1 x 2 g = 8 g.
-    { id: "hashforceone", price: 270, title: "Pack 2 — HashForceOne ✈️", logo: "FarmHashForceOne.jpg", subtitle: "7 variétés · 8 g au total", sections: [
+   /*  { id: "hashforceone", price: 270, title: "Pack 2 — HashForceOne ✈️", logo: "FarmHashForceOne.jpg", subtitle: "7 variétés · 8 g au total", sections: [
       { title: "Sélection HashForceOne — 8 g", items: ["GUSHERS PIE — 1 g", "JEALOUSY — 1 g", "CEREAL MILK — 1 g", "BERRY DRIP — 1 g", "ZESTO — 1 g", "VELVET SKY — 1 g", "SUNSET Z — 2 g"] }
-    ] },
+    ] }, */
     { id: "byusforyou", price: 230, title: "Pack 3 — ByUsForYou 💎", logo: "FarmByUsForYou.jpg", subtitle: "7 variétés · 7 g (4 g FS + 3 g WPFF 90/73)", sections: [
       { title: "Full Spectrum WPFF S.S — 4 g", items: ["Yellow Fresca 💛🍍🍈 — 1 g", "Gaznivore ⛽️🦖 — 1 g", "PinkChardonay 🍾🌷⛽️ — 1 g", "Lemon Incest ⛽️🍋 — 1 g"] },
       { title: "WPFF SingleSource 90-73 — 3 g", items: ["Gaznivore ⛽️🦖 — 1 g", "PinkChardonay 🍾🌷⛽️ — 1 g", "Rhum Baba 🍹🎋 — 1 g"] }
@@ -940,9 +1045,9 @@ function showWelcomeOffer() {
   /*   { id: "calius", price: 90, title: "Pack 4 — Cali US 🇺🇸", logo: "", subtitle: "MidShelf US NoBrand 🏆 · 4 variétés, 8 g au total", sections: [
       { title: "MidShelf US NoBrand — 8 g", items: ["PinkLady 🙋‍♀️🇺🇸 — 2 g", "KimTech ⚡️🇺🇸 — 2 g", "Lemon Eid 🍋🇺🇸 — 2 g", "Purple Cream 💜🍦🇺🇸 — 2 g"] }
     ] }, */
-    { id: "mixzepek", price: 280, title: "Pack 5 — Mix Zepek 🔥", logo: "", subtitle: "Pour les gros pek · sélection mixte à personnaliser", sections: [
+   /*  { id: "mixzepek", price: 280, title: "Pack 5 — Mix Zepek 🔥", logo: "", subtitle: "Pour les gros pek · sélection mixte à personnaliser", sections: [
       { title: "Composition annoncée", items: ["3 variétés Static TerpValley au choix", "3 variétés HashForceOne au choix", "1 variété WPFF Full Spectrum au choix", "1 variété WPFF 90-73 au choix", "Static US Purple Dream", "3 variétés Cali au choix"] }
-    ] }
+    ] } */
   ];
   const packsGiftLabel = "🎁 Livré avec cigarette, feuilles et briquet";
   appData.unshift({ id: "Packs", name: "PACKS 🎁", type: "Packs", quality: "PACKS 🎁", image: "CategPack.png" });
@@ -1033,6 +1138,16 @@ function showWelcomeOffer() {
     detail.append(priceLabel, includedGift, addButton);
     productListContainer.appendChild(detail);
   }
+
+  // État de stock HashForceOne : ZESTO reste disponible.
+  // Cette règle couvre également de futurs produits de cette farm.
+  appData.forEach((category) => {
+    (category.products || []).forEach((product) => {
+      if (product.farm === "HashForceOne ✈️🇺🇸") {
+        product.outOfStock = product.id !== "ZESTO🇺🇸";
+      }
+    });
+  });
 
   // --- VARIABLES D'ÉTAT ---
   let cart = [];
@@ -1509,6 +1624,7 @@ function showWelcomeOffer() {
       const card = document.createElement("div");
       card.className = "product-card product-item-card";
       card.dataset.productId = product.id;
+      if (product.outOfStock) card.classList.add("is-sold-out");
 
       // --- 1. LOGIQUE PLEINE LARGEUR ---
       // Si c'est un Pack, on ajoute la classe spéciale
@@ -1530,6 +1646,7 @@ function showWelcomeOffer() {
 
       card.innerHTML = `
             ${imgHTML}
+            ${product.outOfStock ? '<span class="sold-out-badge">RUPTURE DE STOCK</span>' : ''}
             <div class="info">
                 <div class="name">${product.name} ${flagHTML}</div>
                 <div class="farm">${product.farm}</div> 
@@ -1575,6 +1692,7 @@ function showWelcomeOffer() {
       const card = document.createElement("div");
       card.className = "product-card product-item-card";
       card.dataset.productId = product.id;
+      if (product.outOfStock) card.classList.add("is-sold-out");
 
       // Si c'est le Pack de Noël (vérifie bien que l'ID est correct), on met la classe large
       if (product.id === "PackNoel2025" || product.type === "Pack") {
@@ -1591,6 +1709,7 @@ function showWelcomeOffer() {
 
       card.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
+                ${product.outOfStock ? '<span class="sold-out-badge">RUPTURE DE STOCK</span>' : ''}
                 <div class="info">
                     <div class="name">${product.name} ${flagHTML}</div>
                     <div class="farm">${product.farm}</div>
@@ -1686,9 +1805,11 @@ function showWelcomeOffer() {
     <span class="current-price">${tarif.price.toFixed(2)}€</span>
 </div>
                 </div>
-                <button class="add-to-cart-btn" data-product-id="${product.id}" data-weight="${tarif.weight}" data-price="${tarif.price}">
-                    <svg width="20" height="20"><use href="#icon-cart"/></svg>
-                </button>
+                ${product.outOfStock
+                  ? '<span class="stock-unavailable" role="status">RUPTURE DE STOCK</span>'
+                  : `<button class="add-to-cart-btn" data-product-id="${product.id}" data-weight="${tarif.weight}" data-price="${tarif.price}">
+                       <svg width="20" height="20"><use href="#icon-cart"/></svg>
+                     </button>`}
             </div>
         `,
       )
@@ -2102,11 +2223,17 @@ function showWelcomeOffer() {
 
   // Ajoute le paramètre 'variant' à la fin
   function addToCart(productId, weight, price, variant = null) {
-    // L'ID du panier doit inclure la variante pour différencier (ex: 10g Gelato vs 10g Papaya)
+    const product = getProductById(productId);
+    // Bloque également tout ajout éventuel déclenché hors du bouton.
+    if (!product || product.outOfStock) {
+      showNotification("🚫 Ce produit est en rupture de stock.");
+      return;
+    }
+
+    // L'ID du panier doit inclure la variante pour différencier les déclinaisons.
     const cartItemId = `${productId}-${weight}-${variant ? variant.replace(/\s+/g, "") : "default"}`;
 
     const existingItem = cart.find((item) => item.id === cartItemId);
-    const product = getProductById(productId);
 
     // On prépare le nom à afficher (ex: "120u (Papaya Bomb)")
     const displayName = variant
