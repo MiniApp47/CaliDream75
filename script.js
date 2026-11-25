@@ -6,6 +6,73 @@ document.addEventListener("DOMContentLoaded", function () {
   tg.setHeaderColor("#14072a");
   tg.setBackgroundColor("#06031c");
 
+
+  // CAPTCHA visuel à rotation : simple protection côté navigateur.
+  // Pour une protection anti-bot forte il faut un serveur qui valide les jetons.
+  function initCaliDreamCaptcha() {
+    const overlay = document.getElementById('calidream-captcha');
+    const wheel = document.getElementById('captcha-rotator');
+    const slider = document.getElementById('captcha-rotation');
+    const verify = document.getElementById('captcha-check');
+    const status = document.getElementById('captcha-status');
+    if (!overlay || !wheel || !slider || !verify || !status) return;
+
+    function finishCaptcha() {
+      window.calidreamCaptchaPassed = true;
+      try { sessionStorage.setItem('calidream_captcha_ok', '1'); } catch (_) {}
+      overlay.classList.add('captcha-passed');
+      window.setTimeout(() => overlay.remove(), 370);
+      if (typeof window.calidreamOnCaptchaPass === 'function') {
+        const callback = window.calidreamOnCaptchaPass;
+        window.calidreamOnCaptchaPass = null;
+        callback();
+      }
+    }
+    try {
+      if (sessionStorage.getItem('calidream_captcha_ok') === '1') {
+        overlay.remove();
+        window.calidreamCaptchaPassed = true;
+        return;
+      }
+    } catch (_) {}
+
+    let initialAngle = 0;
+    let attempts = 0;
+    function refreshChallenge() {
+      // Un angle aléatoire, jamais déjà correctement orienté.
+      initialAngle = 50 + Math.floor(Math.random() * 260);
+      slider.value = '0';
+      wheel.style.transform = `rotate(${initialAngle}deg)`;
+      status.textContent = '';
+    }
+    function renderRotation() {
+      wheel.style.transform = `rotate(${initialAngle + Number(slider.value)}deg)`;
+      status.textContent = '';
+    }
+    slider.addEventListener('input', renderRotation);
+    verify.addEventListener('click', () => {
+      const angle = (initialAngle + Number(slider.value)) % 360;
+      const difference = Math.min(angle, 360 - angle);
+      if (difference <= 12) {
+        status.classList.add('success');
+        status.textContent = '✅ Vérification réussie !';
+        finishCaptcha();
+      } else {
+        attempts += 1;
+        status.classList.remove('success');
+        status.textContent = attempts >= 3
+          ? '🔁 Nouvelle image : recommence la rotation.'
+          : '❌ Pas encore droit. Aligne la flèche sur le repère HAUT.';
+        if (attempts >= 3) {
+          attempts = 0;
+          window.setTimeout(refreshChallenge, 1100);
+        }
+      }
+    });
+    refreshChallenge();
+  }
+  initCaliDreamCaptcha();
+
   // 🎁 NOTIFICATION CALIDREAM
 function showWelcomeOffer() {
     const overlay = document.createElement("div");
@@ -90,7 +157,8 @@ function showWelcomeOffer() {
     document.getElementById("page-home").classList.add("active");
 
     // 🎁 Affiche l'offre après le chargement
-    showWelcomeOffer();
+    if (window.calidreamCaptchaPassed) showWelcomeOffer();
+    else window.calidreamOnCaptchaPass = showWelcomeOffer;
 
 }, 500);
     }
